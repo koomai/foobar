@@ -7,3 +7,22 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.btn-link {
+    outline: none;
+}
+.btn-not-favourited {
+    color: grey;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.btn-favourited {
+    color: red;
+
+    &:hover {
+        color: grey;
+    }
+}

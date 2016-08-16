@@ -26,4 +26,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Route notifications for the Nexmo channel.
+     *
+     * @return string
+     */
+    public function routeNotificationForPlivo()
+    {
+        return '61421103570';
+    }
+
+    public function favourite(Post $post)
+    {
+        return $this->favourites()->attach($post);
+    }
+
+    public function favourites()
+    {
+        return $this->belongsToMany(Post::class, 'favourites');
+    }
 }

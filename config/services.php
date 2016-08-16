@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'plivo' => [
+        'auth_id' => env('PLIVO_AUTH_ID'),
+        'auth_token' => env('PLIVO_AUTH_TOKEN'),
+        'from_number' => env('PLIVO_FROM_NUMBER'),
+    ],
+
 ];
